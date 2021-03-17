@@ -22,9 +22,9 @@ index.js:
 
 Make a plan: Tasks
 done: add express and server
-alter notes.html to have two columns 
-    set up list in first colum
-    two rows in second colum
+done: alter notes.html to have two columns 
+   done: set up list in first colum
+   done: two rows in second colum
 alter routes to match star wars code with app.get ect
 done: add listener to server at end
 
