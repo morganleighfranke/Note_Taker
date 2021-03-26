@@ -25,8 +25,10 @@ done: add express and server
 done: alter notes.html to have two columns 
    done: set up list in first colum
    done: two rows in second colum
-alter routes to match star wars code with app.get ect
 done: add listener to server at end
+
+the js and css files are not connecting to server?
+fetch response is not doing anything with the data yet
 
 
 Code

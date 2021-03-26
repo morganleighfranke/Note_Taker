@@ -8,7 +8,7 @@
   <title>Note Taker</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/public/assets/css/styles.css">
 </head>
 
 <body>
@@ -22,26 +22,19 @@
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4">
-        <div class="clist-container">
-          <div class="card">
-            <ul class="list-group">
-            </ul>
-          </div>
+      <div class="col-4 list-container">
+        <div class="card">
+          <ul class="list-group">
+          </ul>
         </div>
       </div>
       <div class="col-8">
-        <div clas="row">
         <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
-        </div>
-        <div class="row">
         <textarea class="note-textarea" placeholder="Note Text"></textarea>
-        </div>  
-      </div>
       </div>
     </div>
   </div>
-<script type="text/javascript">
+  <script type="text/javascript">
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -119,6 +112,7 @@ const handleNoteSave = () => {
   });
 };
 
+
 // Delete the clicked note
 const handleNoteDelete = (e) => {
   // prevents the click listener for the list from being called when the button inside of it is clicked
@@ -126,6 +120,7 @@ const handleNoteDelete = (e) => {
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+
 
   if (activeNote.id === noteId) {
     activeNote = {};
@@ -223,9 +218,9 @@ if (window.location.pathname === '/notes') {
 
 getAndRenderNotes();
 
-</script>
 
-  <script src="./index.js"></script>
+  </script>
+
 </body>
 
 </html>
