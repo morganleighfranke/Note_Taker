@@ -1,22 +1,20 @@
 const path = require("path");
 
 module.exports = (app) => {
-    //Setting up the notes.html
+//when notes is called res file of notes.html 
     app.get("/notes", (req, res) => {
         res.sendFile(path.join(__dirname, "..notes.html"))
     });
-    //Setting up the application code for the js client
+//when index.js is called send index.js file
     app.get("/public/assets/js/index.js", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/assets/js/index.js"))
     });
-    //Setting up the css files
+//allows access to css file because it's public and static now
     app.get("/public/assets/css/styles.css", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/assets/css/styles.css"))
     });
-    //Setting up the main/home index.html
+//when star is put in then send back index.html file
     app.get("*", (req, res) => {
         res.sendFile(path.join(__dirname, "..index.html"))
     });
 }
-
-// tolga's code to get path linked using /public/ alter to match your own
