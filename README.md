@@ -21,8 +21,8 @@
   Shows saved notes on the left hand side and when you refresh they remain
   ![saved](./assets/images/saved.png)
   Shows a new note being written and the saved button appears in order to save
-  ![savedbtn](./assets/images/savedbtn.png)
-  
+  ![savedbtn](./assets/images/savebtn.png)
+
   ## License
   MIT
  
